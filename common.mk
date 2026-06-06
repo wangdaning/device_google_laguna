@@ -408,6 +408,10 @@ TARGET_PRODUCT_PROP += device/google/laguna/product.prop
 TARGET_SYSTEM_EXT_PROP += device/google/laguna/system_ext.prop
 TARGET_VENDOR_PROP += device/google/laguna/vendor.prop
 
+# RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
+	
 # SecureElement
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
@@ -432,7 +436,7 @@ $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
 PRODUCT_COPY_FILES += \
     device/google/laguna/audio_effects_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_config.xml
-	
+
 # VINTF
 DEVICE_MANIFEST_FILE += \
     device/google/laguna/vintf/manifest.xml
