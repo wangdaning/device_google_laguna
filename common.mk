@@ -365,15 +365,15 @@ PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay \
     FrameworkResOverlayProductLaguna \
     FrameworkResOverlayVendorLaguna \
-    GlanceableHubConfigOverlay \
-    GlanceableHubSettingsConfigOverlay \
-    GlanceableHubSettingsConfigOverlay2022 \
-    GlanceableHubSysuiConfigOverlay \
-    GoogleConfigOverlay \
+    GlanceableHubConfigOverlayLaguna \
+    GlanceableHubSettingsConfigOverlayLaguna \
+    GlanceableHubSettingsConfigOverlay2022Laguna \
+    GlanceableHubSysuiConfigOverlayLaguna \
+    GoogleConfigOverlayLaguna \
     GooglePermissionControllerSafetyCenterOverlay \
-    PixelConfigOverlay2019 \
-    PixelConfigOverlay2021 \
-    PixelConfigOverlayCommon \
+    PixelConfigOverlay2019Laguna \
+    PixelConfigOverlay2021Laguna \
+    PixelConfigOverlayCommonLaguna \
     PixelConnectivityOverlay2025 \
     PixelDisplayServiceOverlayProductLaguna \
     PixelNfcOverlayCommon \
