@@ -86,10 +86,6 @@ PRODUCT_COPY_FILES += \
 	device/google/laguna/conf/init.efs.4k.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.efs.rc
 endif
 
-# Recovery files
-PRODUCT_COPY_FILES += \
-	device/google/laguna/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.laguna.rc
-
 # Fstab files
 ifeq (true,$(TARGET_BOOTS_16K))
 PRODUCT_SOONG_NAMESPACES += \
@@ -332,6 +328,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+# GoogleFiles as user app
+$(call inherit-product-if-exists, vendor/google/GoogleFiles/config.mk)
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.location.gps.prebuilt.xml
@@ -408,6 +407,10 @@ PRODUCT_PACKAGES += \
 TARGET_PRODUCT_PROP += device/google/laguna/product.prop
 TARGET_SYSTEM_EXT_PROP += device/google/laguna/system_ext.prop
 TARGET_VENDOR_PROP += device/google/laguna/vendor.prop
+
+# Recovery Files
+PRODUCT_COPY_FILES += \
+	device/google/laguna/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.laguna.rc
 
 # RemovePackages
 PRODUCT_PACKAGES += \
