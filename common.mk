@@ -341,6 +341,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     AmbientCueOverlay \
+    CarrierConfigOverlay \
     DMServiceOverlayProductLaguna \
     EuiccSupportPixelOverlay \
     FrameworkResOverlayProductLaguna \
