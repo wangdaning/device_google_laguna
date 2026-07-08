@@ -15,6 +15,11 @@
         <boolean name="world_phone_bool" value="true" />
         <boolean name="nr_advanced_capable_by_default_bool" value="true" />
         <string name="5g_watchdog_routing_policy_string">none</string>
+		        <int-array name="carrier_allowed_network_types_int_array" num="1">
+            <item value="142335" /> 
+        </int-array>
+        <int name="preferred_network_mode_int" value="22" />
+        <boolean name="prefer_2g_bool" value="false" />
     </carrier_config>
 
 <!--China Telecom -->   
