@@ -451,3 +451,25 @@ DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
 
 # ZRAM writeback
 include hardware/google/pixel/mm/device_gki.mk
+
+# Include Google Face Unlock
+include vendor/google/faceunlock/device.mk
+
+# Disable other face unlock implementation
+TARGET_FACE_UNLOCK_SUPPORTED := false
+
+# Add to settings app
+PRODUCT_PACKAGES += SettingsGoogleFutureFaceEnroll
+
+# Add overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/google/faceunlock/overlay
+PRODUCT_PACKAGES += \
+FaceEnrollOverlay \
+PixelTrafficLightFaceOverlay
+
+# Add face permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.biometrics.face.xml
+
+# Add face SEPolicy
+BOARD_SEPOLICY_DIRS += vendor/google/faceunlock/sepolicy
