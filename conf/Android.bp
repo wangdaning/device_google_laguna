@@ -31,3 +31,9 @@ filegroup {
     ],
 }
 
+sh_binary {
+    name: "init.v4a.sh",
+    src: "init.v4a.sh",
+    vendor: true,
+}
+

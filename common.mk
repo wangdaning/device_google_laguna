@@ -233,6 +233,7 @@ PRODUCT_PACKAGES += \
     libdynamicsprocessingaidl \
     libloudnessenhanceraidl \
     libdownmixaidl \
+    libv4a_aidl \
     libhapticgeneratoraidl
 
 # vndservicemanager and vndservice no longer included in API 30+, however needed by vendor code.
@@ -292,7 +293,9 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/config/default_volume_tables.xml
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/config/default_volume_tables.xml \
+    device/google/laguna/configs/audio/audio_effects_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_config.xml
+
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -442,3 +445,11 @@ PRODUCT_COPY_FILES += \
 
 # Add face SEPolicy
 BOARD_SEPOLICY_DIRS += vendor/google/faceunlock/sepolicy
+
+# Viper4Android
+PRODUCT_PACKAGES += \
+    init.v4a.sh \
+    ViPER4Android
+
+PRODUCT_COPY_FILES += \
+    device/google/laguna/conf/init.v4a.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.v4a.rc
